@@ -11,11 +11,24 @@
 /db/*.sqlite3
 /db/*.sqlite3-*
 
+# dotenv
+# TODO Comment out this rule if environment variables can be committed
+.env
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
@@ -38,3 +51,16 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Learn-specific .results.json
+.results.json
