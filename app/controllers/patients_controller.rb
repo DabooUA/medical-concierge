@@ -1,4 +1,5 @@
 class PatientsController < ApplicationController
+  skip_before_action :verified_patient, only: [:new, :create]
 
   def new
     @patient = Patient.new
@@ -32,7 +33,7 @@ class PatientsController < ApplicationController
         :emergency_contact_phone,
         :username,
         :email,
-        :password_digest
+        :password
       )
     end
 end
