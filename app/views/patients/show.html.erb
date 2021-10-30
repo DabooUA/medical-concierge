@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<% if flash[:message] %>
+  <div class="center alert">
+    <p><%= flash[:message] %></p>
+  </div>
+<% end %>
+
+<div class="center">
+
+    <p><strong>Name:</strong><%= @patient.first_name %> <%= @patient.last_name %></p>
+    <p><strong>Genger:</strong><%= @patient.gender %> </p>
+    <p><strong>Age:</strong><%= @patient.age %></p>
+    <p><strong>Birth Date:</strong><%= @patient.born_on %></p>
+    <p><strong>Address:</strong><%= @patient.address %></p>
+    <p><strong>Phone:</strong><%= @patient.phone(pattern: /(\d{3})(\d{4})(\d{4})$/) %></p>
+    <p><strong>Emergency Contact Name:</strong><%= @patient.emergency_contact_name %></p>
+    <p><strong>Emergency Contact Address:</strong><%= @patient.emergency_contact_address %></p>
+    <p><strong>Emergency Contact Phone:</strong><%= @patient.emergency_contact_phone(pattern: /(\d{3})(\d{4})(\d{4})$/) %></p>
+    
+    # Will need to add Edit and Home Buttons
+  </div>
+</div>

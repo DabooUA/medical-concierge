@@ -5,10 +5,93 @@
         <%= pluralize(@patient.errors.count, "error") %> prohibited this user from being saved:
       </h2>
 
-    <ul>
-      <% @patient.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <ul>
+        <% @patient.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
-    </ul>
+      </ul>
     </div>
-    <% end %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <br/>
+    <%= f.text_field :first_name, class: "form-control" %>
+    <br/>
+    <%= f.label :last_name %>
+    <br/>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :gender, "Check the box for Male or Female" %>
+    <br/>
+    <%= f.check_box :gender, :Male, :Female, class: "form-check_input" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :age, "Please enter your age!" %>
+    <br/>
+    <%= f.number_field :age, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :date_of_birth %>
+    <br/>
+    <%= f.date_select :born_on, :start_year=>1920, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address, "Please enter your full home address!" %>
+    <br/>
+    <%= f.text_field :address, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :phone, "Please enter your best contact number in following format 800-888-0000"%>
+    <br/>
+    <%= f.number_to_phone(pattern: /(\d{3})(\d{4})(\d{4})$/), class: "group_control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :emergency_contact_name %>
+    <br/>
+    <%= f.text_field :emergency_contact_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :emergency_contact_address %>
+    <br/>
+    <%= f.text_field :emergency_contact_address, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :emergency_contact_phone %>
+    <br/>
+    <%= f.text_field :emergency_contact_phone, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :username %>
+    <br/>
+    <%= f.text_field :username, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <br/>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <br/>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <br/>
+    <%= f.submit class: "btn btn-primary"%>
+  </div>
+  
+<% end %>
