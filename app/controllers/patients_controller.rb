@@ -12,9 +12,10 @@ class PatientsController < ApplicationController
     else
       render 'new'
     end
+  end
 
   def show
-    @patient = Patient.find_by(:id params[:id])
+    @patient = Patient.find_by(id: params[:id])
   end
 
   private
