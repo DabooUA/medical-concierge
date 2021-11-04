@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'static#home'
   get '/patients', to: 'patients#index', as: 'patients'
   post '/patients', to: 'patients#create'
-  get '/patients/:id', to: 'patinets#show', as: 'patient'
+  get '/patients/:id', to: 'patients#show', as: 'patient'
   get '/patients/:id/edit', to: 'patients#edit', as: 'edit_patient'
   get '/signin', to: 'session#new', as: 'signin'
   post '/session', to: 'session#create', as: 'session'

@@ -12,64 +12,18 @@
       </ul>
     </div>
   <% end %>
-
+<p>
   <div class="form-group">
     <%= f.label :first_name %>
     <br/>
     <%= f.text_field :first_name, class: "form-control" %>
-    <br/>
+    <br/><br/>
     <%= f.label :last_name %>
     <br/>
-    <%= f.text_field :last_name, class: "form-control" %>
+    <%= f.text_field :last_name, class: "form-control" %> 
   </div>
-
-  <div class="form-group">
-    <%= f.label :gender, "Check the box for Male or Female" %>
-    <br/>
-    <%= f.check_box :gender, {}, "Male", "Female" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :age, "Please enter your age!" %>
-    <br/>
-    <%= f.number_field :age, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :date_of_birth %>
-    <br/>
-    <%= f.date_select :born_on, :start_year=>1920, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :address, "Please enter your full home address!" %>
-    <br/>
-    <%= f.text_field :address, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :phone, "Please enter your best contact number in following format 800-888-0000"%>
-    <br/>
-    <%= f.text_field :phone, data: {numeric: true} %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :emergency_contact_name %>
-    <br/>
-    <%= f.text_field :emergency_contact_name, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :emergency_contact_address %>
-    <br/>
-    <%= f.text_field :emergency_contact_address, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :emergency_contact_phone %>
-    <br/>
-    <%= f.text_field :emergency_contact_phone, class: "form-control" %>
-  </div>
+  
+  <br/> 
 
   <div class="form-group">
     <%= f.label :username %>
@@ -77,11 +31,15 @@
     <%= f.text_field :username, class: "form-control" %>
   </div>
 
+  <br/> 
+
   <div class="form-group">
     <%= f.label :email %>
     <br/>
     <%= f.text_field :email, class: "form-control" %>
   </div>
+
+  <br/> 
 
   <div class="form-group">
     <%= f.label :password %>
@@ -93,5 +51,5 @@
     <br/>
     <%= f.submit class: "btn btn-primary"%>
   </div>
-  
+  </p>
 <% end %>

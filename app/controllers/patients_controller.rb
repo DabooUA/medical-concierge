@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  skip_before_action :verified_patient, only: [:new, :create]
+  skip_before_action :verified_user, only: [:new, :create]
 
   def new
     @patient = Patient.new
@@ -24,14 +24,6 @@ class PatientsController < ApplicationController
       params.require(:patient).permit(
         :first_name,
         :last_name,
-        :gender,
-        :age,
-        :born_on,
-        :address,
-        :phone,
-        :emergency_contact_name,
-        :emergency_contact_address,
-        :emergency_contact_phone,
         :username,
         :email,
         :password
