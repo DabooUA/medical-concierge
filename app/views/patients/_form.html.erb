@@ -26,7 +26,7 @@
   <div class="form-group">
     <%= f.label :gender, "Check the box for Male or Female" %>
     <br/>
-    <%= f.check_box :gender, :Male, :Female, class: "form-check_input" %>
+    <%= f.check_box :gender, {}, "Male", "Female" %>
   </div>
 
   <div class="form-group">
@@ -50,7 +50,7 @@
   <div class="form-group">
     <%= f.label :phone, "Please enter your best contact number in following format 800-888-0000"%>
     <br/>
-    <%= f.number_to_phone(pattern: /(\d{3})(\d{4})(\d{4})$/), class: "group_control" %>
+    <%= f.text_field :phone, data: {numeric: true} %>
   </div>
 
   <div class="form-group">
