@@ -18,4 +18,12 @@ class SessionController < ApplicationController
     session.delete("patient_id")
     redirect_to root_path
   end
+
+  def omniauth
+    patient = Patient.find_or_create_by(uid: request.env['omniauth.auth'][:uid], provider: request.env['omniauth.auth'][:provider]) do |f|
+      f.username = request.env['omniauth.auth'][:info][:first_name]
+      f.email = request.env['omniauth.auth'][:info][:email]
+      f.password = SecureRandom.hex(15)
+    end
+  end
 end

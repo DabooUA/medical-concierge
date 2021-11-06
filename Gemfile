@@ -25,6 +25,11 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootstrap-sass', '3.3.7'
 gem 'allow_numeric'
 
+gem 'dotenv-rails'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
