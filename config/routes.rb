@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/auth/google_oauth2/callback', to: 'session#authenticate'
   get 'doctors/_form'
   get 'doctors/new'
   get 'doctors/edit'
@@ -14,5 +15,4 @@ Rails.application.routes.draw do
   get '/signin', to: 'session#new', as: 'signin'
   post '/session', to: 'session#create', as: 'session'
   delete '/session', to: 'session#destroy'
-  get '/auth/:provider/callback', to: 'session#omniauth'
 end

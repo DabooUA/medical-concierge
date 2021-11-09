@@ -5,10 +5,25 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.new
   end
 
+  def create
+    if (doctor = Doctor.create(doctor_params))
+
   def edit
-    
   end
 
   def show
   end
+
+  private
+
+  def doctor_params
+    params.require(:doctor).permit(
+      :first_name,
+      :last_name,
+      :title,
+      :hospital_name,
+      :address
+    )
+  end
+
 end
