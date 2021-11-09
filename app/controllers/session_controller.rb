@@ -25,5 +25,11 @@ class SessionController < ApplicationController
       f.email = request.env['omniauth.auth'][:info][:email]
       f.password = SecureRandom.hex(15)
     end
+    if patient.valid?
+      session[:patient_id]= patient.id
+      redirect_to patient_path(@patient)
+    else
+    redirect_to login_path
+    end
   end
 end

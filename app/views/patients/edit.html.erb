@@ -1,0 +1,20 @@
+
+  <%= form_for @patient do |f| %>
+    <div class="form-group">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+      <br/>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+      <br/>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <br/><br/>
+    </div>
+
+    <div class="actions">
+      <br/>
+      <%= f.submit class: "btn btn-primary"%>
+    </div>
+
+  <% end %>
