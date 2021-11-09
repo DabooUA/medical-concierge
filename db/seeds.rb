@@ -42,3 +42,6 @@ d5 = Doctors.create!(
   Detroit, MI 48202'
 )
 
+p1 = Prescriptions.create!(
+  prescription_name: 
+)
