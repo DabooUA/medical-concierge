@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  get 'prescriptions/show'
   get '/auth/google_oauth2/callback', to: 'session#authenticate'
-  get 'doctors/_form'
-  get 'doctors/new'
-  get 'doctors/edit'
+
   get 'doctors/show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/patients/new', to: 'patients#new', as: 'new_patient'

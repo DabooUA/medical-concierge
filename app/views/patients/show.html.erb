@@ -6,11 +6,17 @@
   </div>
 <% end %>
 
-<div class="center">
-
-    <p><strong>Name: </strong><%= @patient.first_name %> <%= @patient.last_name %></p>
-    
-    
-    <%= link_to "Edit", edit_patient_url %>
+<% if @patient.provider == nil %>
+  <div class="center">
+      <p><strong>Name: </strong><%= @patient.first_name %> <%= @patient.last_name %></p>
+      <br/>
+      <p><strong>Email: </strong><%= @patient.email%>
+      <br/><br/>
+      <%= link_to "Edit", edit_patient_url %> 
   </div>
-</div>
+<% else %>  
+  <div class='center'>
+    <p><strong>Username: </strong><%= @patient.email%>
+  </div>
+<% end %>
+
