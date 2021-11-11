@@ -1,4 +1,5 @@
-Doctors.create!([{
+Doctor.destroy_all
+Doctor.create!([{
   id: 1,
   first_name: 'Saadia',
   last_name: 'Abbas',
@@ -50,15 +51,15 @@ Doctors.create!([{
   Family Medicine - 2E
   Detroit, MI 48202'
 }])
-
-Prescriptions.create!([{
+Prescription.destroy_all
+Prescription.create!([{
   id: 1,
   doctor_id: 5,
   prescription_name: 'Atorvastatin',
   pharmacy_name: 'Kroger Pharmacy',
   pharmacy_address: '2905 Union Lake Rd, Commerce Charter Twp, MI 48382',
   patient_id: '1',
-  prescription_date: '01/20/2020'
+  prescription_date: DateTime.strptime('01/20/2020', '%m/%d/%Y')
 },
 
 {
@@ -68,7 +69,7 @@ Prescriptions.create!([{
   pharmacy_name: 'Walgreens Pharmacy',
   pharmacy_address: '2270 Union Lake Rd, Commerce Charter Twp, MI 48382',
   patient_id: '1',
-  prescription_date: '04/10/2020'
+  prescription_date: DateTime.strptime('04/10/2020', '%m/%d/%Y')
 },
 
 {
@@ -78,7 +79,7 @@ Prescriptions.create!([{
   pharmacy_name: 'CVS Pharmacy',
   pharmacy_address: '1325 E Commerce Rd, Commerce Charter Twp, MI 48382',
   patient_id: '1',
-  prescription_date: '03/5/2020'
+  prescription_date: DateTime.strptime('03/5/2020', '%m/%d/%Y')
 },
 
 {
@@ -88,7 +89,7 @@ Prescriptions.create!([{
   pharmacy_name: 'CVS Pharmacy',
   pharmacy_address: '1325 E Commerce Rd, Commerce Charter Twp, MI 48382',
   patient_id: '2',
-  prescription_date: '10/20/2020'
+  prescription_date: DateTime.strptime('10/20/2020', '%m/%d/%Y')
 },
 
 {
@@ -98,7 +99,7 @@ Prescriptions.create!([{
   pharmacy_name: 'Walgreens Pharmacy',
   pharmacy_address: '2270 Union Lake Rd, Commerce Charter Twp, MI 48382',
   patient_id: '2',
-  prescription_date: '06/1/2021'
+  prescription_date: DateTime.strptime('06/1/2021', '%m/%d/%Y')
 },
 
 {
@@ -108,7 +109,7 @@ Prescriptions.create!([{
   pharmacy_name: 'Walgreens Pharmacy',
   pharmacy_address: '2270 Union Lake Rd, Commerce Charter Twp, MI 48382',
   patient_id: '2',
-  prescription_date: '12/20/2020'
+  prescription_date: DateTime.strptime('12/20/2020', '%m/%d/%Y')
 },
 
 {
@@ -118,7 +119,7 @@ Prescriptions.create!([{
   pharmacy_name: 'Kroger Pharmacy',
   pharmacy_address: '2905 Union Lake Rd, Commerce Charter Twp, MI 48382',
   patient_id: '3',
-  prescription_date: '09/4/2021'
+  prescription_date: DateTime.strptime('09/4/2021', '%m/%d/%Y')
 },
 
 {
@@ -128,7 +129,7 @@ Prescriptions.create!([{
   pharmacy_name: 'Kroger Pharmacy',
   pharmacy_address: '2905 Union Lake Rd, Commerce Charter Twp, MI 48382',
   patient_id: '3',
-  prescription_date: '05/15/2021'
+  prescription_date: DateTime.strptime('05/15/2021', '%m/%d/%Y')
 },
 
 {
@@ -138,7 +139,7 @@ Prescriptions.create!([{
   pharmacy_name: 'Kroger Pharmacy',
   pharmacy_address: '2905 Union Lake Rd, Commerce Charter Twp, MI 48382',
   patient_id: '3',
-  prescription_date: '10/23/2021'
+  prescription_date: DateTime.strptime('10/23/2021', '%m/%d/%Y')
 },
 
 {
@@ -148,5 +149,5 @@ Prescriptions.create!([{
   pharmacy_name: 'Kroger Pharmacy',
   pharmacy_address: '2905 Union Lake Rd, Commerce Charter Twp, MI 48382',
   patient_id: '1',
-  prescription_date: '08/12/2021'
+  prescription_date: DateTime.strptime('08/12/2021', '%m/%d/%Y')
 }])

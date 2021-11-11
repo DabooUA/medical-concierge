@@ -6,6 +6,7 @@ class CreatePrescriptions < ActiveRecord::Migration[6.1]
       t.string :pharmacy_name
       t.string :pharmacy_address
       t.integer :patient_id
+      t.datetime :prescription_date
 
       t.timestamps
     end
