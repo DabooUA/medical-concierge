@@ -1,6 +1,7 @@
 class DoctorsController < ApplicationController
   
   def show
+    @doctor = Doctor.all
   end
 
   private
