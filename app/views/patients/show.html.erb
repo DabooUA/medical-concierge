@@ -20,5 +20,22 @@
   </div>
 <% end %>
 
-<%= link_to "Show All Prescriptions", show_prescription_url %>
+
+<p><% @patient.prescriptions.each do |prescription| %>
+    <div>
+      
+        <li>
+          <strong>Prescription date: </strong><%= prescription.prescription_date.strftime('%m/%d/%Y') %><br/>
+          <strong>Prescription name: </strong><%= prescription.prescription_name %><br/>
+          <strong>Pharmacy name: </strong><%= prescription.pharmacy_name %><br/>
+          <strong>Pharmacy address: </strong><%=prescription.pharmacy_address %><br/>
+          
+        </li><br/>
+      
+    </div>
+
+<% end %></p>
+
+
+
 
