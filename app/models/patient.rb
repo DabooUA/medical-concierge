@@ -7,8 +7,7 @@ class Patient < ApplicationRecord
   validates_length_of :first_name, :last_name, :username, maximum: 80
 
   has_secure_password
-  has_many :prescriptions
+  has_many :prescriptions, -> { order(prescription_date: :asc)}
   has_many :doctors, through: :prescriptions  
 
-  
 end
