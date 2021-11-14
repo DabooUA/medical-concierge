@@ -8,5 +8,7 @@ class Patient < ApplicationRecord
 
   has_secure_password
   has_many :prescriptions
-  has_many :doctors, through: :prescriptions
+  has_many :doctors, through: :prescriptions  
+
+  
 end

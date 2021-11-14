@@ -1,2 +1,11 @@
-<h1>Doctors#show</h1>
-<p>Find me in app/views/doctors/show.html.erb</p>
+<h1 align="center">Doctor's Information</h1>
+
+<div>
+  <ul>
+  <strong>Full Name: </strong><%= @doctor.first_name + ' ' + @doctor.last_name %><br/>
+  <strong>Title: </strong><%= @doctor.title %><br/>
+  <strong>Doctor's office name: </strong><%= @doctor.hospital_name %><br/>
+  <strong>Doctor's office address: </strong><%= @doctor.address %><br/>
+  </ul>
+</div>
+

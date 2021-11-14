@@ -23,15 +23,17 @@
 
 <p><% @patient.prescriptions.each do |prescription| %>
     <div>
-      
+      <ul>
         <li>
+
           <strong>Prescription date: </strong><%= prescription.prescription_date.strftime('%m/%d/%Y') %><br/>
           <strong>Prescription name: </strong><%= prescription.prescription_name %><br/>
           <strong>Pharmacy name: </strong><%= prescription.pharmacy_name %><br/>
           <strong>Pharmacy address: </strong><%=prescription.pharmacy_address %><br/>
-          
+          Doctor name: <a href='/doctors/<%= prescription.doctor_id %>/show' ><%= prescription.doctor.first_name %> <%= prescription.doctor.last_name %></a>
+
         </li><br/>
-      
+      </ul>
     </div>
 
 <% end %></p>
