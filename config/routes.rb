@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2/callback', to: 'session#authenticate'
 
   get '/doctors/:id/show', to: 'doctors#show', as: 'show_doctor'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/patients/new', to: 'patients#new', as: 'new_patient'
   root 'static#home'
   get '/patients', to: 'patients#index', as: 'patients'

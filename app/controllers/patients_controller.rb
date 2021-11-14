@@ -27,6 +27,7 @@ class PatientsController < ApplicationController
   end
 
   def update
+    
     @patient = Patient.find_by(id: params[:id])
       if @patient.update(params.require(:patient).permit(:first_name, :last_name, :email))
         flash[:success] = "Profile successfully update!"
