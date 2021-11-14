@@ -29,7 +29,7 @@ class SessionController < ApplicationController
       session[:patient_id]= patient.id
       redirect_to patient_path(patient)
     else
-      redirect_to login_path
+      redirect_to signin_path
     end
   end
 end
