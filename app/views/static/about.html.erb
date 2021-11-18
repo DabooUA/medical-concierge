@@ -1,0 +1,5 @@
+<% if current_user == nil %>
+  <%= link_to "Log in", signin_path %>
+<% else %>
+<h2>Thanks for being a memeber, <%= current_user.username %>!
+<% end %>
